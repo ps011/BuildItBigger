@@ -23,8 +23,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String joke = jokeTeller.tellJoke();
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, joke));
+      //  String joke  = jokeTeller.tellJoke();
 
     }
 
@@ -52,11 +51,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void tellJoke(View view){
-        String joke = jokeTeller.tellJoke();
-        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
-        Intent i = new Intent(this, JokeShow.class);
-        i.putExtra("joke",joke);
-        startActivity(i);
+
+        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "ABC"));
+
+
     }
 
 
