@@ -11,7 +11,7 @@ TextView joke;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joke_show);
-       joke =  (TextView) findViewById(R.id.joke);
+       joke =  (TextView) findViewById(R.id.text_view_joke);
 
         String jokeString = getIntent().getStringExtra("joke");
 
